@@ -1052,7 +1052,7 @@ async function analyzeProfile() {
 
     showToast('✅ Profile analyzed! Found ' + data.job_matches.length + ' matches.');
   } catch(e) {
-    addMessage('ai', `⚠️ I'm running in demo mode (backend not connected). In the full version, I'd analyze your profile using our RAG engine with FAISS vector search, fetch live job matches, and give you a personalized career roadmap powered by Claude (Anthropic).\n\n**Try asking me anything in the chat below** — I'll respond with demo intelligence!`);
+    addMessage('ai', `⚠️ I'm running in demo mode (backend not connected). In the full version, I'd analyze your profile using our RAG engine with FAISS vector search, fetch live job matches, and give you a personalized career roadmap.\n\n**Try asking me anything in the chat below** — I'll respond with demo intelligence!`);
   }
 }
 
