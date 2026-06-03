@@ -1,8 +1,6 @@
 # TalentMatch AI 🎯
 ### AI-Powered Talent Intelligence Platform
 
-> Built as a demo project aligned to [Astoria AI](https://astoria.ai)'s mission — helping people unlock their potential and organizations attract qualified talent.
-
 ![TalentMatch AI](https://img.shields.io/badge/Powered%20by-Claude%20(Anthropic)-gold?style=flat-square)
 ![Stack](https://img.shields.io/badge/Stack-FastAPI%20%7C%20FAISS%20%7C%20LangChain%20%7C%20RAG-teal?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
