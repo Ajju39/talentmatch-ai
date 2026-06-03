@@ -1,0 +1,72 @@
+[
+  {
+    "role": "Junior Data Engineer",
+    "level": 1,
+    "skills_needed": ["Python", "SQL", "ETL basics", "Git"],
+    "skills_to_grow": ["PySpark", "Cloud platforms", "dbt", "Airflow"],
+    "avg_salary": "$75,000 - $95,000",
+    "years_experience": "0-2",
+    "next_role": "Data Engineer",
+    "advice": "Focus on mastering SQL and Python. Build personal projects on cloud platforms. Learn at least one orchestration tool like Airflow or dbt."
+  },
+  {
+    "role": "Data Engineer",
+    "level": 2,
+    "skills_needed": ["Python", "SQL", "PySpark", "Cloud (AWS/Azure/GCP)", "ETL", "dbt"],
+    "skills_to_grow": ["Databricks", "Snowflake", "Data Modeling", "CI/CD", "Streaming"],
+    "avg_salary": "$95,000 - $130,000",
+    "years_experience": "2-5",
+    "next_role": "Senior Data Engineer or AI Data Engineer",
+    "advice": "Get hands-on with Databricks and a cloud data warehouse. Start contributing to architectural decisions. Learn infrastructure as code with Terraform."
+  },
+  {
+    "role": "Senior Data Engineer",
+    "level": 3,
+    "skills_needed": ["Databricks", "Snowflake", "Terraform", "CI/CD", "Data Modeling", "Cloud Architecture"],
+    "skills_to_grow": ["LLM/AI integrations", "MLOps", "Data Mesh", "Leadership", "System Design"],
+    "avg_salary": "$120,000 - $160,000",
+    "years_experience": "5-8",
+    "next_role": "Staff Engineer or AI Data Engineer",
+    "advice": "Begin building AI/ML integration skills. Take ownership of large-scale systems. Mentor junior engineers and lead design discussions."
+  },
+  {
+    "role": "AI Data Engineer",
+    "level": 4,
+    "skills_needed": ["Databricks", "LLM", "RAG", "Python", "MLOps", "Vector Databases", "Azure/AWS"],
+    "skills_to_grow": ["Agentic AI", "GraphRAG", "Mosaic AI", "Multi-modal AI", "AI Architecture"],
+    "avg_salary": "$140,000 - $185,000",
+    "years_experience": "5-9",
+    "next_role": "Staff AI Engineer or AI Architect",
+    "advice": "Deep-dive into LLM orchestration frameworks like LangChain and MCP. Build production RAG systems. Get certified in Databricks and cloud AI platforms."
+  },
+  {
+    "role": "GenAI Engineer",
+    "level": 4,
+    "skills_needed": ["LangChain", "Claude/GPT APIs", "RAG", "Embeddings", "Vector Search", "Python", "FastAPI"],
+    "skills_to_grow": ["Agentic workflows", "LLM evaluation", "Fine-tuning", "Multi-modal", "AI safety"],
+    "avg_salary": "$130,000 - $175,000",
+    "years_experience": "4-8",
+    "next_role": "Staff GenAI Engineer or Head of AI",
+    "advice": "Focus on building production-grade LLM applications, not just demos. Learn evaluation frameworks, observability for AI, and responsible AI practices."
+  },
+  {
+    "role": "Staff AI Engineer",
+    "level": 5,
+    "skills_needed": ["AI Architecture", "LLM Systems", "System Design", "Leadership", "Cross-team collaboration"],
+    "skills_to_grow": ["Technical Strategy", "AI Research", "Executive Communication", "Product Thinking"],
+    "avg_salary": "$180,000 - $250,000",
+    "years_experience": "8-12",
+    "next_role": "Principal Engineer or VP of Engineering",
+    "advice": "Influence technical direction across multiple teams. Build deep expertise in one AI domain while maintaining broad systems knowledge. Publish and speak at conferences."
+  },
+  {
+    "role": "AI Architect / Principal Engineer",
+    "level": 6,
+    "skills_needed": ["Enterprise Architecture", "AI Strategy", "Multi-cloud", "Executive Communication", "Budget Planning"],
+    "skills_to_grow": ["Business Strategy", "Investor Relations", "Team Building", "M&A evaluation"],
+    "avg_salary": "$220,000 - $320,000",
+    "years_experience": "12+",
+    "next_role": "CTO or Chief AI Officer",
+    "advice": "At this level, impact comes through people and decisions, not code. Build strong relationships with business leaders. Think in terms of organizational capability, not individual systems."
+  }
+]

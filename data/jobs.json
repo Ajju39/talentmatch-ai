@@ -1,0 +1,98 @@
+[
+  {
+    "id": "j001",
+    "title": "AI Data Engineer",
+    "company": "TechCorp Inc.",
+    "level": "Senior",
+    "skills": ["Python", "Databricks", "Azure", "LLM", "RAG", "PySpark", "Delta Lake", "MLOps"],
+    "experience_years": 5,
+    "description": "Build and operate production AI data pipelines, RAG systems, and LLM integrations on Azure Databricks. Design Medallion Architecture, manage Unity Catalog governance, and support AI agent workflows.",
+    "salary_range": "$140,000 - $180,000",
+    "domain": "AI/ML",
+    "growth_path": "Staff AI Engineer → Principal Engineer"
+  },
+  {
+    "id": "j002",
+    "title": "GenAI Engineer",
+    "company": "Innovate AI",
+    "level": "Mid-Senior",
+    "skills": ["Python", "LangChain", "Claude", "GPT", "RAG", "Vector Search", "FastAPI", "Embeddings"],
+    "experience_years": 4,
+    "description": "Design and build LLM-powered applications, RAG pipelines, conversational AI systems, and agentic workflows. Integrate Claude and GPT APIs into production services.",
+    "salary_range": "$130,000 - $165,000",
+    "domain": "GenAI",
+    "growth_path": "Senior GenAI Engineer → AI Architect"
+  },
+  {
+    "id": "j003",
+    "title": "ML Platform Engineer",
+    "company": "DataDriven Co.",
+    "level": "Senior",
+    "skills": ["Python", "Kubernetes", "MLflow", "Terraform", "CI/CD", "Docker", "Azure", "MLOps"],
+    "experience_years": 5,
+    "description": "Build and maintain ML platform infrastructure, deployment pipelines, model serving, and observability frameworks. Manage CI/CD for ML workloads on cloud platforms.",
+    "salary_range": "$145,000 - $185,000",
+    "domain": "MLOps",
+    "growth_path": "Staff ML Engineer → VP of Engineering"
+  },
+  {
+    "id": "j004",
+    "title": "Data Engineer",
+    "company": "HealthTech Solutions",
+    "level": "Senior",
+    "skills": ["Python", "SQL", "Snowflake", "ETL", "dbt", "Airflow", "AWS", "Data Modeling"],
+    "experience_years": 5,
+    "description": "Design scalable ETL pipelines, Snowflake data warehouses, and dbt transformation models for healthcare analytics. Ensure HIPAA compliance and data governance.",
+    "salary_range": "$120,000 - $155,000",
+    "domain": "Healthcare Data",
+    "growth_path": "Lead Data Engineer → Data Architect"
+  },
+  {
+    "id": "j005",
+    "title": "Full Stack AI Developer",
+    "company": "StartupAI",
+    "level": "Mid",
+    "skills": ["Python", "React", "FastAPI", "LangChain", "PostgreSQL", "Docker", "RAG", "REST APIs"],
+    "experience_years": 3,
+    "description": "Build full-stack AI-powered web applications from backend to frontend. Design RAG pipelines, REST APIs, and responsive user interfaces for AI products.",
+    "salary_range": "$110,000 - $145,000",
+    "domain": "Full Stack",
+    "growth_path": "Senior Full Stack → CTO Track"
+  },
+  {
+    "id": "j006",
+    "title": "Cloud Data Architect",
+    "company": "Enterprise Cloud Corp",
+    "level": "Principal",
+    "skills": ["Azure", "AWS", "GCP", "Databricks", "Terraform", "Data Modeling", "Python", "Architecture"],
+    "experience_years": 8,
+    "description": "Architect enterprise cloud data platforms, define data strategy, and lead cross-functional teams to deliver scalable, governed data solutions across multi-cloud environments.",
+    "salary_range": "$170,000 - $220,000",
+    "domain": "Architecture",
+    "growth_path": "Distinguished Engineer → Chief Data Officer"
+  },
+  {
+    "id": "j007",
+    "title": "AI Product Engineer",
+    "company": "Talent Intelligence Inc.",
+    "level": "Senior",
+    "skills": ["Python", "LLM", "RAG", "Personalization", "Vector Search", "FastAPI", "Embeddings", "NLP"],
+    "experience_years": 4,
+    "description": "Build AI-powered talent intelligence features — job matching, career recommendations, personalization engines, and conversational AI for a global talent platform.",
+    "salary_range": "$135,000 - $170,000",
+    "domain": "AI Products",
+    "growth_path": "Staff AI Engineer → Head of AI"
+  },
+  {
+    "id": "j008",
+    "title": "DevOps / MLOps Engineer",
+    "company": "ScaleOps",
+    "level": "Senior",
+    "skills": ["Kubernetes", "Docker", "Terraform", "CI/CD", "GitHub Actions", "Azure DevOps", "Python", "Datadog"],
+    "experience_years": 5,
+    "description": "Design and manage CI/CD pipelines, infrastructure as code, and MLOps workflows. Implement observability, incident response, and deployment governance for AI workloads.",
+    "salary_range": "$125,000 - $160,000",
+    "domain": "DevOps/MLOps",
+    "growth_path": "Staff DevOps → VP of Infrastructure"
+  }
+]
