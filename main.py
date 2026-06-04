@@ -23,8 +23,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import anthropic
-from sentence_transformers import SentenceTransformer
-import faiss
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 # ── App Setup ─────────────────────────────────────────────────────
 app = FastAPI(title="TalentMatch AI", version="1.0.0")
@@ -60,12 +61,13 @@ class CompanyQuery(BaseModel):
 # ── RAG Engine ────────────────────────────────────────────────────
 class TalentRAGEngine:
     def __init__(self):
-        print("Loading embedding model...")
-        self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
+        print("Loading RAG engine (lightweight TF-IDF)...")
         self.jobs = []
         self.careers = []
-        self.job_index = None
-        self.career_index = None
+        self.job_vectorizer = TfidfVectorizer(max_features=500)
+        self.career_vectorizer = TfidfVectorizer(max_features=500)
+        self.job_matrix = None
+        self.career_matrix = None
         self._build_indexes()
 
     def _build_indexes(self):
@@ -78,37 +80,35 @@ class TalentRAGEngine:
             f"{j['title']} {j['description']} {' '.join(j['skills'])} {j['domain']}"
             for j in self.jobs
         ]
-        job_embeddings = self.encoder.encode(job_texts, normalize_embeddings=True)
-        self.job_index = faiss.IndexFlatIP(job_embeddings.shape[1])
-        self.job_index.add(job_embeddings.astype('float32'))
+        self.job_matrix = self.job_vectorizer.fit_transform(job_texts)
 
         career_texts = [
             f"{c['role']} {c['advice']} {' '.join(c['skills_needed'])} {' '.join(c['skills_to_grow'])}"
             for c in self.careers
         ]
-        career_embeddings = self.encoder.encode(career_texts, normalize_embeddings=True)
-        self.career_index = faiss.IndexFlatIP(career_embeddings.shape[1])
-        self.career_index.add(career_embeddings.astype('float32'))
+        self.career_matrix = self.career_vectorizer.fit_transform(career_texts)
 
         print(f"✅ RAG indexes built: {len(self.jobs)} jobs, {len(self.careers)} career paths")
 
     def search_jobs(self, query: str, top_k: int = 3) -> List[dict]:
-        query_vec = self.encoder.encode([query], normalize_embeddings=True).astype('float32')
-        scores, indices = self.job_index.search(query_vec, top_k)
+        query_vec = self.job_vectorizer.transform([query])
+        scores = cosine_similarity(query_vec, self.job_matrix)[0]
+        top_indices = scores.argsort()[-top_k:][::-1]
         results = []
-        for score, idx in zip(scores[0], indices[0]):
+        for idx in top_indices:
             job = self.jobs[idx].copy()
-            job['match_score'] = round(float(score) * 100, 1)
+            job['match_score'] = round(float(scores[idx]) * 100, 1)
             results.append(job)
         return results
 
     def search_careers(self, query: str, top_k: int = 2) -> List[dict]:
-        query_vec = self.encoder.encode([query], normalize_embeddings=True).astype('float32')
-        scores, indices = self.career_index.search(query_vec, top_k)
+        query_vec = self.career_vectorizer.transform([query])
+        scores = cosine_similarity(query_vec, self.career_matrix)[0]
+        top_indices = scores.argsort()[-top_k:][::-1]
         results = []
-        for score, idx in zip(scores[0], indices[0]):
+        for idx in top_indices:
             career = self.careers[idx].copy()
-            career['relevance_score'] = round(float(score) * 100, 1)
+            career['relevance_score'] = round(float(scores[idx]) * 100, 1)
             results.append(career)
         return results
 
